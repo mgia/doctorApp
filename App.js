@@ -3,8 +3,20 @@ import { StyleSheet, Text, View, Image, Button } from "react-native";
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
+import { Typography, Colors } from './styles'
 
 class HomeScreen extends Component {
+  static navigationOptions = {
+    title: 'Home',
+    headerStyle: {
+      backgroundColor: Colors.headerBackground,
+    },
+    headerTintColor: Colors.headerTitle,
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+  };
+
   render() {
     return (
       <View style = {styles.container}>
@@ -27,6 +39,10 @@ class HomeScreen extends Component {
 }
 
 class DoctorScreen extends Component {
+  static navigationOptions = {
+    title: 'Profile',
+  };
+
   render() {
     return (
       <View style = {styles.container}>
@@ -37,6 +53,10 @@ class DoctorScreen extends Component {
 }
 
 class ChatScreen extends Component {
+  static navigationOptions = {
+    title: 'Chat',
+  };
+
   render() {
     return (
       <View style = {styles.container}>
@@ -47,6 +67,10 @@ class ChatScreen extends Component {
 }
 
 class IntroScreen extends Component {
+  static navigationOptions = {
+    title: 'Usage',
+  };
+
   render() {
     return (
       <View style = {styles.container}>
